@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Personal Website</title>
-  <meta name="description" content="Personal landing page" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Babar Ali — Operations Team Lead</title>
+  <meta name="description" content="Babar Ali — Operations Team Lead | Zone Delivery Services | Dubai" />
+
   <style>
     :root{
-      --bg:#0b0f14;
+      --bg:#070a0f;
+      --bg2:#0b0f14;
       --panel: rgba(255,255,255,.06);
       --panel2: rgba(255,255,255,.10);
-      --line: rgba(255,255,255,.12);
+      --line: rgba(255,255,255,.10);
       --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
+      --muted: rgba(255,255,255,.72);
       --yellow:#f6c445;
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --radius: 22px;
-      --max: 1180px;
+      --shadow: 0 24px 80px rgba(0,0,0,.55);
+      --radius: 24px;
+      --max: 1200px;
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
     }
 
@@ -27,222 +29,169 @@
       font-family:var(--font);
       color:var(--text);
       background:
-        radial-gradient(900px 500px at 15% 5%, rgba(246,196,69,.18), transparent 60%),
-        radial-gradient(900px 600px at 90% 10%, rgba(0,180,255,.14), transparent 60%),
-        radial-gradient(1100px 700px at 70% 90%, rgba(246,196,69,.10), transparent 60%),
-        var(--bg);
+        radial-gradient(900px 520px at 18% 8%, rgba(246,196,69,.16), transparent 60%),
+        radial-gradient(900px 600px at 88% 14%, rgba(0,180,255,.14), transparent 62%),
+        radial-gradient(1100px 700px at 62% 92%, rgba(246,196,69,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
       overflow-x:hidden;
     }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
 
-    a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:22px 16px 80px;}
-
-    /* Navbar */
+    /* NAV */
     .nav{
       position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(12px);
-      background: linear-gradient(to bottom, rgba(11,15,20,.90), rgba(11,15,20,.50));
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(7,10,15,.86), rgba(7,10,15,.55));
       border-bottom:1px solid var(--line);
     }
-    .nav-inner{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:12px 16px;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px;
+    .navin{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px}
+    .mark{
+      width:44px;height:44px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(246,196,69,.95), rgba(0,180,255,.60));
+      box-shadow: 0 0 0 5px rgba(246,196,69,.10);
+      display:grid;place-items:center;color:#091018;font-weight:1000
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;}
-    .logo{
-      width:34px; height:34px; border-radius:10px;
-      background: linear-gradient(135deg, rgba(246,196,69,.95), rgba(0,180,255,.65));
-      box-shadow: 0 0 0 4px rgba(246,196,69,.10);
-      display:grid; place-items:center;
-      color:#091018;
-      font-weight:900;
-    }
-    .nav-links{display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
-    .link{
-      padding:9px 12px; border-radius:999px;
-      border:1px solid var(--line);
+    .menu{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .pill{
+      padding:10px 14px;border-radius:999px;border:1px solid var(--line);
       background: rgba(255,255,255,.05);
       font-size:14px;
       transition:.15s ease;
     }
-    .link:hover{background: rgba(255,255,255,.10); transform: translateY(-1px); border-color: rgba(255,255,255,.22);}
+    .pill:hover{background:rgba(255,255,255,.10);transform:translateY(-1px)}
     .btn{
-      padding:10px 14px; border-radius:999px;
-      border:0; cursor:pointer; font-weight:800;
-      color:#0a1016;
-      background: var(--yellow);
+      padding:11px 16px;border-radius:999px;border:0;cursor:pointer;
+      font-weight:900;color:#0a1016;background:var(--yellow);
       box-shadow: 0 14px 34px rgba(246,196,69,.18);
       transition:.15s ease;
     }
-    .btn:hover{transform: translateY(-1px)}
-    .btn-ghost{
-      padding:10px 14px; border-radius:999px;
-      border:1px solid var(--line);
+    .btn:hover{transform:translateY(-1px)}
+    .btn2{
+      padding:11px 16px;border-radius:999px;border:1px solid var(--line);
       background: rgba(255,255,255,.06);
-      font-weight:800; cursor:pointer;
-      transition:.15s ease;
+      font-weight:900;cursor:pointer;transition:.15s ease;
     }
-    .btn-ghost:hover{background: rgba(255,255,255,.10); transform: translateY(-1px)}
+    .btn2:hover{background:rgba(255,255,255,.10);transform:translateY(-1px)}
 
-    /* Hero */
+    /* HERO */
     .hero{
-      margin-top:22px;
+      margin-top:18px;
+      border-radius: 28px;
       border:1px solid var(--line);
-      border-radius:var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
-      box-shadow: var(--shadow);
       overflow:hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      box-shadow: var(--shadow);
     }
-    .hero-grid{
+    .heroGrid{
       display:grid;
       grid-template-columns: 1.05fr .95fr;
-      gap:0;
       align-items:stretch;
     }
-    @media (max-width: 900px){ .hero-grid{grid-template-columns:1fr} }
-
-    .hero-left{
-      padding:30px;
-      min-height:420px;
-      position:relative;
-    }
-    .eyebrow{
-      display:inline-flex; gap:10px; align-items:center;
-      font-size:13px; color:var(--muted);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      padding:8px 12px;
-      border-radius:999px;
-    }
-    .eyebrow b{color:rgba(255,255,255,.90)}
-    h1{margin:14px 0 10px; font-size:56px; line-height:1.02; letter-spacing:-.6px;}
-    @media (max-width: 520px){ h1{font-size:40px;} }
-    .accent{color:var(--yellow)}
-    .sub{
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.7;
-      max-width:62ch;
-    }
-    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
-    .chip{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:9px 12px; border-radius:999px;
+    @media (max-width: 980px){ .heroGrid{grid-template-columns:1fr} }
+    .heroL{padding:34px 30px 28px;min-height:480px}
+    .tag{
+      display:inline-flex;gap:10px;align-items:center;
+      padding:9px 13px;border-radius:999px;
       border:1px solid var(--line);
       background: rgba(255,255,255,.05);
-      font-size:13px;
-      color: rgba(255,255,255,.82);
+      color:var(--muted);font-size:13px;
     }
-    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
-
-    .hero-right{
-      position:relative;
-      min-height:420px;
+    h1{margin:14px 0 10px;font-size:60px;line-height:1.02;letter-spacing:-.8px}
+    @media (max-width: 520px){ h1{font-size:42px} }
+    .accent{color:var(--yellow)}
+    .sub{color:var(--muted);line-height:1.7;max-width:72ch}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .chip{
+      padding:10px 12px;border-radius:999px;border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      font-size:13px;color:rgba(255,255,255,.82);
+      display:inline-flex;gap:8px;align-items:center;
+    }
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .metaRow{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:18px}
+    .stat{
+      display:flex;gap:10px;align-items:center;
+      padding:10px 12px;border-radius:16px;border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color:var(--muted);font-size:13px;
+    }
+    .dot{
+      width:34px;height:34px;border-radius:12px;display:grid;place-items:center;
+      background: rgba(246,196,69,.10);
+      border:1px solid rgba(246,196,69,.25);
+      color:var(--yellow);font-weight:900
+    }
+    .heroR{
+      min-height:480px;
       background:
-        radial-gradient(1000px 500px at 70% 30%, rgba(246,196,69,.12), transparent 60%),
-        radial-gradient(900px 600px at 20% 90%, rgba(0,180,255,.10), transparent 60%),
-        rgba(0,0,0,.20);
-      display:grid;
-      place-items:center;
-      padding:18px;
+        radial-gradient(1100px 520px at 70% 20%, rgba(246,196,69,.10), transparent 60%),
+        radial-gradient(900px 620px at 20% 90%, rgba(0,180,255,.10), transparent 62%),
+        rgba(0,0,0,.22);
+      display:grid;place-items:center;padding:18px;
     }
-    .hero-img{
-      width:min(430px, 92%);
-      aspect-ratio: 1 / 1;
-      border-radius: 26px;
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow: 0 30px 80px rgba(0,0,0,.55);
+    .heroImg{
+      width:min(520px, 92%);
+      aspect-ratio: 4 / 5;
+      border-radius: 28px;
       overflow:hidden;
-      background:#111;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow: 0 30px 90px rgba(0,0,0,.60);
+      background:#10151c;
     }
-    .hero-img img{width:100%; height:100%; object-fit:cover; display:block;}
+    .heroImg img{width:100%;height:100%;object-fit:cover;display:block}
 
-    /* Section */
-    section{margin-top:22px;}
-    .section-title{
-      margin:0 0 12px;
-      font-size:28px;
-      letter-spacing:-.2px;
-    }
-    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-    @media (max-width: 900px){ .grid-2{grid-template-columns:1fr} }
+    /* Sections */
+    section{padding-top:28px}
+    .centerTitle{text-align:center;margin:0 0 8px;font-size:40px;letter-spacing:-.4px}
+    @media (max-width:520px){ .centerTitle{font-size:30px} }
+    .centerSub{margin:0 auto 22px;max-width:78ch;text-align:center;color:var(--muted);line-height:1.7}
+
     .card{
       border:1px solid var(--line);
-      border-radius:var(--radius);
       background: rgba(255,255,255,.06);
-      box-shadow: var(--shadow);
-      padding:18px;
-    }
-    .muted{color:var(--muted); line-height:1.7}
-    .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
-    .badge{
-      padding:9px 12px; border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      font-size:13px;
-    }
-
-    /* About + Image */
-    .media{
-      display:grid; grid-template-columns: 1.1fr .9fr; gap:16px; align-items:stretch;
-    }
-    @media (max-width: 900px){ .media{grid-template-columns:1fr} }
-    .media-img{
       border-radius: var(--radius);
-      overflow:hidden;
-      border:1px solid var(--line);
-      background:#111;
-      min-height:260px;
-    }
-    .media-img img{width:100%; height:100%; object-fit:cover; display:block;}
-
-    /* Certificate block */
-    .cert-wrap{
-      display:grid; grid-template-columns: 1fr; gap:16px;
-    }
-    .cert{
-      display:grid; grid-template-columns: 1fr; gap:16px;
-      padding:18px;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
       box-shadow: var(--shadow);
     }
-    .cert-img{
-      border:1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      overflow:hidden;
-      background:#111;
+    .row{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      padding:22px;
+      align-items:center;
     }
-    .cert-img img{width:100%; height:auto; display:block;}
+    @media (max-width:980px){ .row{grid-template-columns:1fr} }
+    .icon{
+      width:44px;height:44px;border-radius:16px;display:grid;place-items:center;
+      border:1px solid rgba(246,196,69,.25);
+      background: rgba(246,196,69,.10);
+      color:var(--yellow);font-weight:900;margin-bottom:10px
+    }
+    .h3{margin:0 0 8px;font-size:30px;letter-spacing:-.2px}
+    .p{margin:0;color:var(--muted);line-height:1.7;white-space:pre-wrap}
 
-    /* FAQ */
-    details{
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+    }
+    @media (max-width:980px){ .grid3{grid-template-columns:1fr} }
+    .mini{
+      padding:18px;
+      border-radius: 20px;
       border:1px solid var(--line);
       background: rgba(255,255,255,.05);
-      border-radius: 16px;
-      padding:14px 14px;
     }
-    details + details{margin-top:10px;}
-    summary{
-      cursor:pointer;
-      font-weight:800;
-      list-style:none;
-    }
-    summary::-webkit-details-marker{display:none;}
-    .answer{margin-top:10px; color:var(--muted); line-height:1.7}
+    .mini b{color:rgba(255,255,255,.92)}
+    .mini .small{margin-top:8px;color:var(--muted);line-height:1.6;font-size:14px}
 
-    /* Footer */
     footer{
-      margin-top:24px;
+      margin:34px 0 70px;
       border-top:1px solid var(--line);
       padding-top:16px;
-      color:var(--muted);
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
-      font-size:13px;
+      display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      color:var(--muted);font-size:13px;
     }
   </style>
 </head>
@@ -250,58 +199,60 @@
 <body>
   <!-- NAV -->
   <div class="nav">
-    <div class="nav-inner">
+    <div class="wrap navin">
       <div class="brand">
-        <div class="logo">Y</div>
-        <div>Your Name</div>
+        <div class="mark">B</div>
+        <div>Babar Ali</div>
       </div>
 
-      <div class="nav-links">
-        <a class="link" href="#home">Home</a>
-        <a class="link" href="#about">About</a>
-        <a class="link" href="#work">Work</a>
-        <a class="link" href="#certificate">Certificate</a>
-        <a class="link" href="#faq">FAQ</a>
-        <a class="btn-ghost" href="#contact">Contact</a>
-        <button class="btn" id="copyBtn" type="button">Copy Email</button>
+      <div class="menu">
+        <a class="pill" href="#home">Home</a>
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#skills">Skills</a>
+        <a class="pill" href="#analytics">Analytics</a>
+        <a class="pill" href="#contact">Contact</a>
+        <button class="btn2" id="copyBtnTop" type="button">Copy Email</button>
+        <a class="btn" href="#contact">Contact</a>
       </div>
     </div>
   </div>
 
-  <div class="container" id="home">
-
+  <div class="wrap" id="home">
     <!-- HERO -->
     <div class="hero">
-      <div class="hero-grid">
-        <div class="hero-left">
-          <div class="eyebrow">🔥 <b>Personal Website</b> • Dark Premium Layout</div>
+      <div class="heroGrid">
+        <div class="heroL">
+          <div class="tag">🔥 LinkedIn Profile</div>
 
           <h1>
-            Master Your <span class="accent">Presence</span><br/>
-            Online Today
+            <span class="accent">Operations Team Lead</span><br/>
+            Zone Delivery Services | Dubai
           </h1>
 
           <p class="sub">
-            Ye landing page aapke personal brand ke liye hai: aap ka naam, skills, projects, certificate,
-            aur contact. Aap apni images add karke bilkul professional look bana sakte ho.
+            <b>Babar Ali</b><br/>
+            Operations Team Lead | Zone Delivery Services | Dubai
           </p>
 
           <div class="chips">
-            <div class="chip">✅ Fast & Mobile Friendly</div>
-            <div class="chip">✅ Sections + FAQ</div>
-            <div class="chip">✅ Your Photos</div>
+            <div class="chip">✅ 10,337 followers</div>
+            <div class="chip">✅ 500+ connections</div>
           </div>
 
-          <div class="hero-actions">
-            <a class="btn" href="#work">See My Work</a>
-            <a class="btn-ghost" href="#contact">Contact Me</a>
+          <div class="actions">
+            <a class="btn" id="liBtnHero" target="_blank" rel="noreferrer">Open LinkedIn</a>
+            <a class="btn2" href="#about">About</a>
+          </div>
+
+          <div class="metaRow">
+            <div class="stat"><span class="dot">📧</span> <span id="emailInline"></span></div>
+            <div class="stat"><span class="dot">💬</span> WhatsApp: <span id="waInline"></span></div>
           </div>
         </div>
 
-        <div class="hero-right">
-          <div class="hero-img">
-            <!-- Replace this with your photo -->
-            <img src="assets/hero.jpg" alt="Your photo" />
+        <div class="heroR">
+          <div class="heroImg">
+            <img src="assets/hero.jpg" alt="Babar Ali" />
           </div>
         </div>
       </div>
@@ -309,156 +260,130 @@
 
     <!-- ABOUT -->
     <section id="about">
-      <h2 class="section-title">Many Problems. One Solution.</h2>
+      <h2 class="centerTitle">About</h2>
+      <p class="centerSub">Text below is exactly as visible in your LinkedIn screenshot (including the ending “…”).</p>
 
-      <div class="media">
-        <div class="card">
-          <h3 style="margin:0 0 8px;">What is this Website?</h3>
-          <p class="muted" style="margin:0;">
-            Ye aapka personal landing page hai. Aap yahan apna intro, skills, services,
-            projects, certificate aur contact details show kar sakte ho — bilkul premium style me.
+      <div class="card row">
+        <div>
+          <div class="icon">▶</div>
+          <div class="h3">About Babar Ali</div>
+          <p class="p">
+I am a Data Management & Analysis Specialist with expertise in attendance and performance management, onboarding, and operations. With 3+ years at Zone Delivery Services, Dubai, I have developed strong skills in data analysis, process improvement, and performance tracking to optimize workflows and...
           </p>
+        </div>
 
-          <div class="badges">
-            <span class="badge">📌 Your Bio</span>
-            <span class="badge">🧠 Skills</span>
-            <span class="badge">💼 Work</span>
-            <span class="badge">🏆 Certificates</span>
-            <span class="badge">📞 Contact</span>
+        <div class="mini">
+          <b>Top skills</b>
+          <div class="small">
+            • Analytical Skills<br/>
+            • Financial Analysis<br/>
+            • Data Analysis<br/>
+            • Data Entry<br/>
+            • Customer Service
           </div>
         </div>
-
-        <div class="media-img">
-          <!-- Replace with your second image -->
-          <img src="assets/about.jpg" alt="About image" />
-        </div>
       </div>
     </section>
 
-    <!-- WORK / SERVICES -->
-    <section id="work">
-      <h2 class="section-title">What I Offer</h2>
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 class="centerTitle">Skills</h2>
+      <p class="centerSub">Same skills list as visible on your LinkedIn screenshot.</p>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3 style="margin:0 0 8px;">Service / Skill 1</h3>
-          <p class="muted" style="margin:0;">
-            Yahan apni 1st service ya skill ka short description likho.
-            Example: Web design, Admin work, Data entry, Trading, etc.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 style="margin:0 0 8px;">Service / Skill 2</h3>
-          <p class="muted" style="margin:0;">
-            Yahan apni 2nd service/skill likho. Aap chaaho to projects ke links bhi add kar sakte ho.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 style="margin:0 0 8px;">Project 1</h3>
-          <p class="muted" style="margin:0;">
-            Project ka short intro + link.
-            Example: “Portfolio website”, “Business page”, “Automation scripts”, etc.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 style="margin:0 0 8px;">Project 2</h3>
-          <p class="muted" style="margin:0;">
-            Doosra project. Aap images bhi add kar sakte ho later.
-          </p>
-        </div>
+      <div class="grid3">
+        <div class="mini"><b>Analytical Skills</b></div>
+        <div class="mini"><b>Financial Analysis</b></div>
+        <div class="mini"><b>Data Analysis</b></div>
+        <div class="mini"><b>Data Entry</b></div>
+        <div class="mini"><b>Customer Service</b></div>
       </div>
     </section>
 
-    <!-- CERTIFICATE -->
-    <section id="certificate">
-      <h2 class="section-title">Become the Master of Your Time</h2>
+    <!-- ANALYTICS -->
+    <section id="analytics">
+      <h2 class="centerTitle">Analytics</h2>
+      <p class="centerSub">Numbers below are exactly from your LinkedIn screenshot.</p>
 
-      <div class="cert">
-        <div class="cert-img">
-          <!-- Replace with your certificate image -->
-          <img src="assets/certificate.jpg" alt="Certificate image" />
+      <div class="grid3">
+        <div class="mini">
+          <b>304 profile views</b>
+          <div class="small">Discover who viewed your profile.</div>
         </div>
-        <p class="muted" style="margin:0;">
-          Yahan aap apna certificate / achievement / award show kar sakte ho.
-          (Image replace kar do apni certificate wali.)
-        </p>
+        <div class="mini">
+          <b>392 post impressions</b>
+          <div class="small">Check out who’s engaging with your posts. (Past 7 days)</div>
+        </div>
+        <div class="mini">
+          <b>48 search appearances</b>
+          <div class="small">See how often you appear in search results.</div>
+        </div>
       </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-
-      <details open>
-        <summary>Website kaise update hogi?</summary>
-        <div class="answer">
-          GitHub repo me <b>index.html</b> edit karo aur commit karo. Kuch seconds me website update ho jayegi.
-        </div>
-      </details>
-
-      <details>
-        <summary>Apni photo kaise lagao?</summary>
-        <div class="answer">
-          <b>assets/hero.jpg</b> ko apni photo se replace karo (same name).
-          Phir GitHub me upload/commit.
-        </div>
-      </details>
-
-      <details>
-        <summary>Custom domain (example: yourname.com) lag sakta hai?</summary>
-        <div class="answer">
-          Haan. Settings → Pages → Custom domain me domain add hota hai (DNS setup bhi karna hota hai).
-        </div>
-      </details>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="centerTitle">Contact</h2>
+      <p class="centerSub">Your contact details (as you provided earlier).</p>
 
-      <div class="card">
-        <p class="muted" style="margin:0 0 12px;">
-          Neeche email copy button se aapka email easily copy ho jayega. (MY_EMAIL change karo)
+      <div class="card" style="padding:22px">
+        <p class="p">
+          <b>Email:</b> <span id="emailText"></span><br/>
+          <b>WhatsApp:</b> <span id="waText"></span>
         </p>
 
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn-ghost" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">WhatsApp</a>
-          <a class="btn-ghost" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-          <a class="btn-ghost" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn2" id="waBtn" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a class="btn2" id="liBtn" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn2" id="igBtn" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="btn2" id="fbBtn" target="_blank" rel="noreferrer">Facebook</a>
+          <button class="btn" id="copyBtn" type="button">Copy Email</button>
         </div>
-
-        <p class="muted" style="margin:12px 0 0;">
-          Email: <b id="emailText"></b>
-        </p>
       </div>
     </section>
 
     <footer>
-      <div>© <span id="year"></span> Your Name</div>
-      <div>Made with HTML + CSS • Hosted on GitHub Pages</div>
+      <div>© <span id="year"></span> Babar Ali</div>
+      <div>Hosted on GitHub Pages</div>
     </footer>
-
   </div>
 
   <script>
-    // ====== CHANGE THIS TO YOUR EMAIL ======
-    const MY_EMAIL = "BABARPRINCEOFFICAIL@GMAIL.COM";
+    // Your real details (provided earlier by you)
+    const MY_EMAIL = "BABARPRINCEOFFICIAL@GMAIL.COM";
+    const WHATSAPP_NUMBER = "923077130635"; // wa.me needs no +
+    const LINKEDIN_HANDLE = "BABARALI";
+    const INSTAGRAM_HANDLE = "BABARALI";
+    const FACEBOOK_HANDLE = "RANABABARALI";
 
-    document.getElementById("emailText").textContent = MY_EMAIL;
+    const LINKEDIN_URL = `https://www.linkedin.com/in/${LINKEDIN_HANDLE}/`;
+    const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}/`;
+    const FACEBOOK_URL  = `https://www.facebook.com/${FACEBOOK_HANDLE}/`;
+    const WHATSAPP_URL  = `https://wa.me/${WHATSAPP_NUMBER}`;
+
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    document.getElementById("copyBtn").addEventListener("click", async () => {
+    document.getElementById("emailText").textContent = MY_EMAIL;
+    document.getElementById("emailInline").textContent = MY_EMAIL;
+
+    document.getElementById("waText").textContent = "+" + WHATSAPP_NUMBER;
+    document.getElementById("waInline").textContent = "+" + WHATSAPP_NUMBER;
+
+    document.getElementById("waBtn").href = WHATSAPP_URL;
+    document.getElementById("liBtn").href = LINKEDIN_URL;
+    document.getElementById("liBtnHero").href = LINKEDIN_URL;
+    document.getElementById("igBtn").href = INSTAGRAM_URL;
+    document.getElementById("fbBtn").href = FACEBOOK_URL;
+
+    async function copyEmail(){
       try{
         await navigator.clipboard.writeText(MY_EMAIL);
         alert("Email copied: " + MY_EMAIL);
       }catch(e){
         alert("Copy failed. Email is: " + MY_EMAIL);
       }
-    });
+    }
+    document.getElementById("copyBtn").addEventListener("click", copyEmail);
+    document.getElementById("copyBtnTop").addEventListener("click", copyEmail);
   </script>
 </body>
 </html>
-	
